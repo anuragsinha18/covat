@@ -1,0 +1,97 @@
+{% extends 'home.html' %}
+
+{% block card %}
+	<div class="row container m-auto">
+		<div class="jumbotron bg-transparent col col-12 col-sm-6 col-md-4">
+			<div class="department-card" style="overflow: hidden;">
+				<div style="height:200px; overflow: hidden;" >
+					<img src="https://i.pinimg.com/736x/fd/a1/3b/fda13b9d6d88f25a9d968901d319216a.jpg" style="width:100%;" class="border rounded card-image">
+				</div>
+				<div class="ml-2">
+					<p class="pl-2 pt-2">
+					<h5>COVAT</h5>
+					<small class="font-weight-bold text-muted " style="font-size:.8rem;">
+						Highly Interactive Chatbot Who can clear all your queries related to covid 19 
+						<br>
+						<span class="lead font-weight-bold">Try out Covat Chat bot</span>
+					</small><br>
+					<button class="btn btn-outline-primary mt-3 bot-clicker">
+						<span class="cobat">Talk To Cobat</span>
+					</button>
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- <physical therapy> -->
+
+		<div class="jumbotron bg-transparent col col-12 col-sm-6 col-md-4">
+			<div class="department-card" style="overflow: hidden;">
+				<div style="height:200px; overflow: hidden;" >
+					<img src="https://www.scripps.org/sparkle-assets/images/nurse_safely_checking_in_patient_1200x750-3b4614d05b007fc6044cb3a132d64212.jpg" style="width:100%;" class="border rounded card-image">
+				</div>
+				<div class="ml-2">
+					<p class="pl-2 pt-2">
+					<h5>Have Online Appointment</h5>
+					<small class="font-weight-bold text-muted " style="font-size:.8rem;">
+						Now it doesn't matter in which corner of the world you are you can schedule the appointment on your own.
+					</small><br>
+					<button class="btn btn-outline-primary mt-3">
+						<span><a style="text-decoration: none" href="{% url 'main:register' %}">Appointment</a></span>
+					</button>
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- <dental care> -->
+
+		<div class="jumbotron bg-transparent col col-12 col-sm-6 col-md-4">
+			<div class="department-card" style="overflow: hidden;">
+				<div style="height:200px; overflow: hidden;" >
+					<img src="https://www.bbva.com/wp-content/uploads/2019/11/machine-learning-1920x1180.jpg" style="width:100%;" class="border rounded card-image">
+				</div>
+				<div class="ml-2">
+					<p class="pl-2 pt-2">
+					<h5>Covid Detection Ml Model</h5>
+					<small class="font-weight-bold text-muted " style="font-size:.8rem;">
+						If you want to detect covid based on the symptoms then 
+						try our Covid Ml detector . 
+						<br>
+						<span class="lead font-weight-bold">It's Free</span>
+					</small><br>
+					<button class="btn btn-outline-primary mt-3">
+						<span><a style="text-decoration: none" href="{% url 'main:covid_symptoms_detection' %}">Detect Covid</a></span>
+					</button>
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- <diagnostic test> -->
+
+	</div>
+
+
+	<div class="quote" style="height:100vh; overflow:hidden; position: relative;">
+		<img src="https://www.cedars-sinai.org/content/dam/cedars-sinai/blog/2020/04/doctors-office-safe.jpg"
+			style="width:100%; opacity: .6;"
+		>
+
+		<div class="corousal">
+			<i class="fa fa-quote-right h1" style="color:wheat;" aria-hidden="true"></i>
+
+			<p class="lead lead text-muted font-weight-bold mt-5 mb-5" style="font-size:30px;">
+				
+				“After you find out all the things that can go wrong, 
+				<br>
+				your life becomes less about living and more about waiting.” 
+				<br>
+			</p>
+			<hr class="bg-secondary" style="width:10%;">
+			<h5>
+				― Chuck Palahniuk, Choke
+			</>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<style>
+	.jumbotron {
+			background: white;
+			box-shadow: 5px 3px 20px rgba(0, 0, 0, .3);
+			max-width: 700px;	
+			transition: 400ms linear;	
+		}
+
+		.jumbotron:hover {
+			transform: translateY(-4px);	
+			transition: 400ms linear;
+		}
+</style>
+	{% if messages %}
+		{% for message in messages %}
+				<div class="alert alert-success w-75 mx-auto mt-3" role="alert">
+					{{ message }}
+				</div>
+		{% endfor %}
+	{% endif %}
+	<form class="container w-75 jumbotron mt-4 py-2" id="login" method="POST">
+		{% csrf_token %}
+		{{ form|crispy }}
+		<input type="submit" name="" value="submit"  class="btn btn-outline-primary mt-4">
+	</form>
+{% endblock %}

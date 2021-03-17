@@ -1,0 +1,80 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+<style type="text/css">
+	.outer {
+
+	}
+
+	.inner:nth-child(1) {
+		margin-top: 30px;
+	}
+
+	.inner {
+		width: 100%;
+		display: block;
+		text-align: center;
+		transition: 500ms linear;
+	}
+
+	.inner:hover {
+		transform: translateY(-3px);
+		opacity: .7;
+		transition: 500ms linear;
+	}
+
+	button {
+		border: none;
+		min-width: 400px;
+		border-radius: 10px;
+		outline: none;
+		padding: 20px 40px;
+		background: orange;
+		color: white;
+		font-weight: bold;
+		font-family: ubuntu;
+		letter-spacing: 1px;
+		margin: 10px;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: white;
+	}
+
+</style>
+<!--
+	<a href="" class="mx-2 text-light covid">Predict Covid</a>
+-->
+<div class="outer">
+	<div class="inner">
+		<button>
+			<a href="{% url 'main:covid_xray_prediction' %}">
+				Predict Covid From Xray
+			</a>
+		</button>
+	</div>
+	
+	<div class="inner">
+		<button>
+			<a href="{% url 'main:covid_ctscan_prediction' %}">
+				Predict Covid From CTScan
+			</a>
+		</button>
+	</div>
+
+	<div class="inner">
+		<button>
+			<a href="{% url 'main:covid_symptoms_detection' %}">
+				Predict Covid Risk Factor From Symtoms
+			</a>
+		</button>
+	</div>
+</div>
+{% endblock %}
