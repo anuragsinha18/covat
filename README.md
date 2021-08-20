@@ -1,1 +1,2 @@
-### covid-syptoms-prediction
+### covat
+
